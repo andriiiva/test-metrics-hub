@@ -1,0 +1,3 @@
+global:
+  scrape_interval: 15s
+enable_feature: remote-write-receiver
