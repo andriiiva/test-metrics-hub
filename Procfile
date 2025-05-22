@@ -1,1 +1,1 @@
-web: prometheus --config.file=prometheus.yml --enable-feature=remote-write-receiver
+web: /bin/prometheus --web.listen-address=:$PORT --config.file=/etc/prometheus/prometheus.yml --web.enable-remote-write-receiver
