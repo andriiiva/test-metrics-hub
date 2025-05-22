@@ -3,4 +3,6 @@ FROM prom/prometheus:latest
 
 COPY prometheus.yml /etc/prometheus/prometheus.yml
 
-CMD ["--config.file=/etc/prometheus/prometheus.yml", "--web.enable-remote-write-receiver"]
+ENV PORT=9090
+EXPOSE 9090
+CMD [ "--web.listen-address=:$PORT", "--config.file=/etc/prometheus/prometheus.yml", "--web.enable-remote-write-receiver" ]
